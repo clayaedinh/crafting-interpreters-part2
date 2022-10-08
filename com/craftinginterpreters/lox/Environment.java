@@ -6,22 +6,23 @@ import java.util.Map;
 class Environment {
   final Environment enclosing;
   private final Map<String, Object> values = new HashMap<>();
-  final Boolean in_function;
+  //final Boolean in_function;
 
   Environment() {
     enclosing = null;
-    this.in_function = false;
+    //this.in_function = false;
   }
 
   Environment(Environment enclosing) {
     this.enclosing = enclosing;
-    this.in_function = false;
+    //this.in_function = false;
   }
-  
+  /*
   Environment(Environment enclosing, Boolean in_function){
     this.enclosing = enclosing;
     this.in_function = in_function;
   }
+  */
 
   void define(String name, Object value) {
     values.put(name, value);

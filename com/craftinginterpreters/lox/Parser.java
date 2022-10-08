@@ -48,7 +48,8 @@ class Parser {
     if (match(PRINT)) return printStatement();
     if (match(WHILE)) return whileStatement();
     if (match(LEFT_BRACE)) return new Stmt.Block(block());
-    return expressionStatement();
+    return returnStatement();
+    //return expressionStatement();
   }
 
   private Stmt forStatement() {
