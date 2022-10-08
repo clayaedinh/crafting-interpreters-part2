@@ -8,7 +8,7 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
   private Environment environment = globals;
 
   Interpreter(){
-    globals.define("clock", new LoxCallable()){
+    globals.define("clock", new LoxCallable(){
       @Override
       public int arity() {return 0;}
 
@@ -19,7 +19,7 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
       
       @Override
       public String toString(){return "<native fn>";}
-    }
+    });
   }
 
   void interpret(List<Stmt> statements) {

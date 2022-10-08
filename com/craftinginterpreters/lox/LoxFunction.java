@@ -9,6 +9,7 @@ class LoxFunction implements LoxCallable{
 
     LoxFunction(Stmt.Function declaration, Environment closure) {
         this.closure = closure;
+        this.declaration = declaration;
     }
     @Override
     public Object call(Interpreter interpreter, List<Object> arguments){
