@@ -1,8 +1,6 @@
 fun hello() {
   for(var i = 0; i < 10; i = i + 1) {
-    if(i == 5) {
-      i;
-    }
+    i;
   }
 }
 print hello();

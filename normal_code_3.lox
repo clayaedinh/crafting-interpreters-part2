@@ -1,8 +1,9 @@
 fun outer(){
     fun inner(){
-        "le ouch";
+        var i = "print me, print me";
+        i;
     }
-    print inner();
+    inner();
 }
 
 print outer();

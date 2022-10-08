@@ -1,4 +1,4 @@
 fun test() {
   print "Hello";
 }
-test();
+print test();
