@@ -1,0 +1,8 @@
+fun outer(){
+    fun inner(){
+        "le ouch";
+    }
+    print inner();
+}
+
+print outer();

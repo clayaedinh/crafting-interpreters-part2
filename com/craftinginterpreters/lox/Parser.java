@@ -33,7 +33,10 @@ class Parser {
       if (match(FUN)) return function("function");
       if (match(VAR)) return varDeclaration();
       return statement();
-    } catch (ParseError error) {
+    } catch (Return returnvalue){
+      return null;
+    }
+    catch (ParseError error) {
       synchronize();
       return null;
     }
@@ -43,7 +46,6 @@ class Parser {
     if (match(FOR)) return forStatement();
     if (match(IF)) return ifStatement();
     if (match(PRINT)) return printStatement();
-    if (match(RETURN)) return returnStatement();
     if (match(WHILE)) return whileStatement();
     if (match(LEFT_BRACE)) return new Stmt.Block(block());
     return expressionStatement();
